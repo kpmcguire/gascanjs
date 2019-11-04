@@ -18,12 +18,14 @@
         form.border-solid.border-red-500.border-2.px-4.py-4.rounded(v-on:submit.prevent v-if="show_new_fillup")
           .flex.flex-wrap.-m-3
             label.m-3
-              p.text-gray-700.mb-2 Car
+              p.text-gray-700.mb-2 
+                | Car 
+                button.new-car(@click="addNewCar" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-1 px-2 rounded-full text-xs") add car
+
               select(v-model="fillup_car" class="bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:shadow-outline w-40")
                 option(value='' disabled) -- Select a Car --
                 option(v-if="new_car" :value="fillup_car") {{fillup_car}}
                 option(v-for="car in uniqueCars" :value="car.car") {{car.car}}
-              button.new-car.block.mt-1(@click="addNewCar" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-1 px-2 rounded-full text-xs mt-2") add car
 
             label.m-3
               p.text-gray-700.mb-2 Date
@@ -47,11 +49,13 @@
             .flex.flex-wrap.-m-3
 
               label.m-3
-                p.text-gray-700.mb-2 Car
+                p.text-gray-700.mb-2 
+                  | Car                 
+                  button.new-car(@click="addNewCar" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-1 px-3 rounded-full text-xs") add car
                 select(v-model="fillup.car" class="bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:shadow-outline w-40")
                     option(value='' disabled) -- Select a Car --
                     option(v-for="car in uniqueCars" :value="car.car") {{car.car}}
-                button.new-car.block.mt-1(@click="addNewCar" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-1 px-2 rounded-full text-xs mt-2") add car
+
 
               label.m-3
                 p.text-gray-700.mb-2 Date
@@ -73,7 +77,7 @@
 
      
 
-
+              .m-3.self-end
                 button.save(:disabled="!isValid(fillup)" :class="{'opacity-50 pointer-events-none': !isValid(fillup), 'hover:bg-orange-700': isValid(fillup) }" class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-1 px-3 rounded-full text-xs") Save
 
                 button.cancel(@click="cancelFillupEdit(fillup)" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-1 px-3 rounded-full text-xs ml-2") Cancel
