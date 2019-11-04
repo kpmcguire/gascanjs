@@ -124,11 +124,21 @@ export default {
     },
     addNewCarEdit: function(item) {
       this.new_car = window.prompt('Nickname for Car:')
-      item.car = this.new_car
+      if (this.new_car !== null) {
+        item.car = this.new_car
+      } else {
+        item.car = this.recentFillups[0].car
+      }
+      
     },
     addNewCar: function() {
       this.new_car = window.prompt('Nickname for Car:')
-      this.fillup_car = this.new_car
+
+      if (this.new_car !== null) {
+        this.fillup_car = this.new_car
+      } else {
+        this.fillup_car = this.recentFillups[0].car
+      }
     },
     isValid: function(fillup) {
       if (
