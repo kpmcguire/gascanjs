@@ -190,17 +190,7 @@ export default {
       this.fillups.splice(index, 1, record);
     },
     dateString: function(date) {
-      // let options = {
-      //   year: 'numeric',
-      //   month: 'short',
-      //   day: 'numeric',
-      //   weekday: 'short',
-      //   hour: 'numeric',
-      //   minute: 'numeric'
-      // }
-      // alert(date)
-      // return new Date(date).toLocaleString('en-US', options)
-      // Mon, Nov 4, 2019, 4: 31 PM 
+
       return moment(date).format("ddd, MMM D, YYYY, h:mm a")
     }
   },

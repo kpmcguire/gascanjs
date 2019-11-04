@@ -1,6 +1,5 @@
 <template lang="pug">
   div.flex.flex-col.h-full
-    div {{fillups}}
     .header.bg-bg
       .max-w-6xl.mx-auto
         h1 
@@ -98,7 +97,7 @@
                       | {{fillup.car}} 
                     li.m-1
                       span.font-bold Miles: 
-                      | {{fillup.ending_odo - fillup.starting_odo}} 
+                      | {{(fillup.ending_odo - fillup.starting_odo).toFixed(2)}} 
                     li.m-1
                       span.font-bold Gallons: 
                       | {{fillup.gallons}} 
