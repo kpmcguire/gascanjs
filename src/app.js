@@ -1,4 +1,3 @@
-var STORAGE_KEY = 'todos-vuejs';
 var FILLUPSTORAGE_KEY = 'gascan-fillups'
 import _ from 'lodash'
 import flatPickr from 'vue-flatpickr-component';
@@ -14,21 +13,12 @@ var fillupStorage = {
   }
 }
 
-var todoStorage = {
-  fetch: function () {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-  },
-  save: function (todos) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
-  }
-};
 
 export default {
   name: 'app',
   data: function () {
     return {
       fillups: fillupStorage.fetch(),
-      todos: todoStorage.fetch(),
       fillup_gallons: '',
       fillup_car: '',
       fillup_date: new Date(),
@@ -168,16 +158,6 @@ export default {
     removeFillup: function(fillup) {
       let index = this.fillups.indexOf(fillup)
       this.fillups.splice(index, 1)
-    },
-
-    removeTodo: function (todo) {
-      var index = this.todos.indexOf(todo);
-      this.todos.splice(index, 1);
-    },
-
-    editTodo: function (todo) {
-      this.beforeEditCache = todo.title;
-      this.editedTodo = todo;
     },
 
     editFillup: function(record) {
