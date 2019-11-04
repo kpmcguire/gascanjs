@@ -9,7 +9,13 @@
   },
   "dependencies": {
     "core-js": "^3.3.2",
-    "vue": "^2.6.10"
+    "director": "^1.2.8",
+    "flatpickr": "^4.6.3",
+    "lodash": "^4.17.15",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "vue": "^2.6.10",
+    "vue-flatpickr-component": "^8.1.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",
@@ -20,6 +26,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "sass": "^1.19.0",
     "sass-loader": "^8.0.0",
+    "vue-cli-plugin-pug": "^1.0.7",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
