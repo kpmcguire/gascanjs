@@ -12,6 +12,7 @@
     "director": "^1.2.8",
     "flatpickr": "^4.6.3",
     "lodash": "^4.17.15",
+    "moment": "^2.24.0",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
     "vue": "^2.6.10",
