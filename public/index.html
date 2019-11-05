@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en" class="h-full" manifest="cache.manifest">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,5 +16,13 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+    <script>
+      function updateSite(event) {
+          window.applicationCache.swapCache();
+      }
+
+      window.applicationCache.addEventListener('updateready', updateSite, false);
+    </script>
   </body>
 </html>

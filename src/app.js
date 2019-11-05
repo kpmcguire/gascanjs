@@ -167,8 +167,10 @@ export default {
     },    
 
     removeFillup: function(fillup) {
-      let index = this.fillups.indexOf(fillup)
-      this.fillups.splice(index, 1)
+      if (window.confirm("Do you really want to remove this fillup?")) {
+        let index = this.fillups.indexOf(fillup)
+        this.fillups.splice(index, 1)
+      }  
     },
 
     editFillup: function(record) {
