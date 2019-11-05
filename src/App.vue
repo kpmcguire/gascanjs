@@ -111,7 +111,7 @@
         .m.flex.items-center(class="lg:px-8")
           span.letter M
           p 
-            a(href="https://kpmcguire.github.io") McGuire Gas Company
+            a(href="https://kpmcguire.github.io") McGuire Gascan Company
 
 
 </template>
