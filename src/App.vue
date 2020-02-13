@@ -46,7 +46,7 @@
             button.fillup-submit.block.mt-5(type="button" :disabled="!isValidNew()" @click="addFillup()" :class="{'opacity-50 pointer-events-none': !isValidNew(), 'hover:bg-orange-700': isValidNew() }" class="inline-block bg-orange-500 text-white font-bold py-2 px-4 rounded-full") Save
             button(@click="show_new_fillup = !show_new_fillup" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full ml-2") Cancel
           
-        div(v-for="fillup in recentFillups").border-t-2.border-gray-500.border-solid
+        div(v-for="fillup in recentFillups" v-bind:key="fillup.id").border-t-2.border-gray-500.border-solid
           form.border-solid.border-red-500.border-2.px-4.py-4.rounded.my-5(v-if="fillup.editing" v-on:submit.prevent="doFillupEdit(fillup)")
             .flex.flex-wrap.-m-3
             

@@ -189,7 +189,8 @@ export default {
     doFillupEdit: function (record) {
       record.editing = false
       var index = _.indexOf(this.fillups, this.cache);
-      this.fillups.splice(index, 1, record);
+      this.fillups[index] = this.cache
+      // this.fillups.splice(index, 1, record);
     },
     dateString: function(date) {
 
